@@ -3,10 +3,19 @@ import './App.css';
 import {Counter} from "./components/Counter";
 import {Nav} from "./components/nav/Nav";
 
+fetch('http://localhost:8000/notes/api/note/1', {
+  method: 'GET',
+  mode: 'cors',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Token 940560bbf6a3f675e364b18d28d6d831026d1b35'
+  },
+}).then(r => console.log(r.json()))
+
 export function App() {
   return (
     <div className="App">
-      <Nav />
+      {/*<Nav />*/}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
