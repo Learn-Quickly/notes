@@ -137,7 +137,7 @@ REST_FRAMEWORK = {
     ),
     'PAGE_SIZE': 100,
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
@@ -151,6 +151,10 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.MultiPartParser'
     ),
     # 'DEFAULT_METADATA_CLASS': 'rest_framework_json_api.metadata.JSONAPIMetadata',
+}
+
+SIMPLE_JWT = {
+   'AUTH_HEADER_TYPES': ('JWT',),
 }
 
 # Static files (CSS, JavaScript, Images)
